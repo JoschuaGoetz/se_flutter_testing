@@ -1,20 +1,25 @@
 import 'dart:convert';
-import 'dart:io';
 
 import 'package:http/http.dart';
 
 import 'model.dart';
 
 class Controller {
+  Client client = Client();
 
-
-  final Client client = Client();
+  Controller([Client client]) {
+    if (client != null) {
+      this.client = client;
+    } else {
+      this.client = Client();
+    }
+  }
 
   Future<List<Pokemon>> getList() async {
     print("Getting body");
 
-
-    var request = await client.get("https://strong-thorn-planet.glitch.me/pokemon");
+    var request =
+        await client.get("https://strong-thorn-planet.glitch.me/pokemon");
 
     print("Data ${request.statusCode} ${request.body}");
 

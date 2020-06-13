@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sepokedex/controller.dart';
 import 'package:sepokedex/detail_page.dart';
-import 'package:sepokedex/example.dart';
 
 import 'model.dart';
 
@@ -34,7 +33,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   Controller _controller = Controller();
 
   @override
@@ -47,16 +45,15 @@ class _MyHomePageState extends State<MyHomePage> {
         child: FutureBuilder(
           future: _controller.getList(),
           builder: (context, snapshot) {
-            if(snapshot.data == null) {
+            if (snapshot.data == null) {
               return Container(
                 child: Center(
                   child: RaisedButton(
-                    onPressed: () => {
-                      print("Pressed"),
-                      setState(() {}),
-                    },
-                      child: Text('Loading')
-                  ),
+                      onPressed: () => {
+                            print("Pressed"),
+                            setState(() {}),
+                          },
+                      child: Text('Loading')),
                 ),
               );
             }
@@ -70,13 +67,17 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                   title: Text(snapshot.data[index].name.toString()),
-                  subtitle: Text(snapshot.data[index].type.join(' | ').toString().capitalizeAll()),
-                  onTap: () => Navigator.of(context).push(new MaterialPageRoute(builder: (context) => DetailPage(snapshot.data[index]))),
+                  subtitle: Text(snapshot.data[index].type
+                      .join(' | ')
+                      .toString()
+                      .capitalizeAll()),
+                  onTap: () => Navigator.of(context).push(new MaterialPageRoute(
+                      builder: (context) => DetailPage(snapshot.data[index]))),
                 );
               },
             );
           },
-          ),
+        ),
       ),
     );
   }
