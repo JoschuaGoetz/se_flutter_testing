@@ -41,3 +41,5 @@ app.*.map.json
 
 # Exceptions to above rules.
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
+.codacy-coverage/codacy-coverage-reporter-assembly.jar
+coverage/lcov.info
