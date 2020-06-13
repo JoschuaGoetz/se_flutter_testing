@@ -61,6 +61,7 @@ class _MyHomePageState extends State<MyHomePage> {
               itemCount: snapshot.data.length,
               itemBuilder: (context, index) {
                 return ListTile(
+                  key: Key('pokemon$index'),
                   leading: CircleAvatar(
                     backgroundImage: NetworkImage(
                       snapshot.data[index].image,

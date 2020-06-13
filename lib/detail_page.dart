@@ -18,24 +18,27 @@ class DetailPage extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(0.0),
             child: Image(
-              image: NetworkImage(
-                  pokemon.image
-              ),
+              image: NetworkImage(pokemon.image),
               fit: BoxFit.cover,
               height: 200,
               width: 200,
-
             ),
           ),
           Align(
             alignment: Alignment.centerLeft,
-            child: Text(pokemon.name,
-              style: Theme.of(context).textTheme.headline1.copyWith(fontSize: 72),),
+            child: Text(
+              pokemon.name,
+              key: Key('pokemonName'),
+              style:
+                  Theme.of(context).textTheme.headline1.copyWith(fontSize: 72),
+            ),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Text(pokemon.description,
-              style: Theme.of(context).textTheme.subtitle1,),
+            child: Text(
+              pokemon.description,
+              style: Theme.of(context).textTheme.subtitle1,
+            ),
           ),
         ],
       ),
