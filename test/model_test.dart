@@ -8,9 +8,26 @@ void main() async {
     print('I run before each and every test');
   });
 
+  setUp(() {
+    print('Me too');
+  });
+
+  setUpAll(() {
+    print('---------------------------------------------------------');
+    print('I run once before everything else');
+  });
+
+  tearDown(() {
+    print('I run after each test');
+  });
+
   group('Bulbasaur', () {
     setUpAll(() {
-      print('I run once at the start of the group');
+      print('I run once at the start of the bulbasaur group');
+    });
+
+    tearDownAll(() {
+      print('I run once after the bulbasaur group');
     });
 
     setUp(() async {
