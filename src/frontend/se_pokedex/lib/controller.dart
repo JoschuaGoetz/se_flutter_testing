@@ -14,7 +14,7 @@ class Controller {
     print("Getting body");
 
 
-    var request = await client.get("http://10.0.2.2:5000/pokemon");
+    var request = await client.get("https://strong-thorn-planet.glitch.me/pokemon");
 
     print("Data ${request.statusCode} ${request.body}");
 
