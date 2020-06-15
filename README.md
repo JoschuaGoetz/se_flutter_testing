@@ -4,7 +4,7 @@ The actual app is made by [DennisRein](https://github.com/DennisRein/se_flutter)
 
 ## Disclaimer
 This is also supposed to be the handout. I didn't convert this to Pdf because converters are not so good with code. 
-So enjoy markdown. Full tutorial is [Flutter]
+So enjoy markdown. The full tutorial is [Flutter_Testing.pdf](Flutter_Testing.pdf).
 
 ## Installation 
 
