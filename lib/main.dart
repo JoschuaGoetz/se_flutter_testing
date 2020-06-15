@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sepokedex/controller.dart';
 import 'package:sepokedex/detail_page.dart';
-import 'package:sepokedex/example.dart';
 
 import 'model.dart';
 
