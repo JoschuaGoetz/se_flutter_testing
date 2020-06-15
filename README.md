@@ -2,6 +2,10 @@
 
 The actual app is made by [DennisRein](https://github.com/DennisRein/se_flutter). This repository just displays how to test a flutter app
 
+## Disclaimer
+This is also supposed to be the handout. I didn't convert this to Pdf because converters are not so good with code. 
+So enjoy markdown. Full tutorial is [Flutter]
+
 ## Installation 
 
 1. Install flutter -> https://flutter.dev/docs/get-started/install
@@ -9,7 +13,7 @@ The actual app is made by [DennisRein](https://github.com/DennisRein/se_flutter)
 3. Get a device to run the tests
     - Run on a emulator -> https://developer.android.com/studio/run/emulator
     - Run on your own device -> https://developer.android.com/studio/run
-4. Add the following plugins to your pubspec.yml and run pub get
+4. Add the following plugins to your `pubspec.yml` and run pub get
 ```
 dev_dependencies:
   flutter_test:
@@ -67,7 +71,7 @@ void main() async {
 ```
 flutter test
 ```
-- If you want code coverage
+- If you want code coverage. Visualized on [codacy](https://app.codacy.com/manual/JoschuaGoetz/se_flutter_testing/files?bid=18631027)
 ```
 flutter test --coverage
 ```
